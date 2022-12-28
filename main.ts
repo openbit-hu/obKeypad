@@ -45,8 +45,8 @@ namespace obKeypad {
         return uppercaseCharacterSet
     }
     //% blockId="obKeypad_onKeyEvent"
-    //% block="on $key key event, repeated $n times, $isAccepted is true, if key is no longer pressed."
-    export function onKeyEvent(callback: (code: number, n: number, isAccepted: boolean) => void):void {
+    //% block="on key event, repeated n times, isAccepted is true, if key is no longer pressed."
+    export function onKeyEvent(callback: (key: number, n: number, isAccepted: boolean) => void):void {
         userCallback = callback
     }
     function readKey() {
